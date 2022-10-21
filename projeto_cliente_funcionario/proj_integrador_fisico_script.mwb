@@ -1,0 +1,26 @@
+create database projeto;
+
+create table cliente (
+	pk_id_cliente integer primary key auto_increment,
+	nome char(30),
+    cpf char(11),
+    email char(30),
+    telefone char(20), 
+    sexo char
+);
+
+create table pedido(
+	pk_id_pedido integer primary key auto_increment, 
+    data_pedido date, 
+    time_pedido time, 
+    valor_total float,
+    fk_id_funcionario ,
+    fk_id_cliente
+);
+
+create table produto(
+	pk_id_produto integer primary key auto_increment, 
+    nome varchar(30),
+    descricao varchar(50),
+    valor float,
+);

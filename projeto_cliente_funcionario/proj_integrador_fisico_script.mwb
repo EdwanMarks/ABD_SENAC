@@ -1,26 +1,27 @@
 create database projeto;
+use projeto; 
 
 create table cliente (
 	pk_id_cliente integer primary key auto_increment,
 	nome char(30),
-    cpf char(11),
+    cpf char(15),
     email char(30),
-    telefone char(20), 
+    endereco char(20), 
     sexo char
 );
 
-create table pedido(
-	pk_id_pedido integer primary key auto_increment, 
-    data_pedido date, 
-    time_pedido time, 
-    valor_total float,
-    fk_id_funcionario ,
-    fk_id_cliente
-);
+insert into cliente (nome, cpf, email, endereco, sexo)
+values 
+('Victor', '00000000001', 'victor@gmail.com', 'endereco1', 'M'),
+('Lucas', '00000000002', 'lucas@gmail.com', 'endereco2', 'M'),
+('Joaquina', '00000000003', 'joaquina@gmail.com', 'endereco3', 'F'),
+('Francisca', '00000000004', 'francisca@gmail.com', 'endereco4', 'F'),
+('Celso', '00000000005', 'celso@gmail.com', 'endereco5', 'M'),
+('Joao', '00000000006', 'joao@gmail.com', 'endereco6', 'M'),
+('Felipe', '00000000007', 'felipe@gmail.com', 'endereco7', 'M'),
+('Rodrigo', '00000000008', 'rodrigo@gmail.com', 'endereco8', 'M'),
+('Eduarda', '00000000009', 'eduarda@gmail.com', 'endereco9', 'F'),
+('Victor Hugo', '00000000010', 'victorhugo@gmail.com', 'endereco10', 'M');
 
-create table produto(
-	pk_id_produto integer primary key auto_increment, 
-    nome varchar(30),
-    descricao varchar(50),
-    valor float,
-);
+
+/*nome, sexo e endereco ond*/
